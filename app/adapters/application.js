@@ -1,1 +1,3 @@
-export default DS.FixtureAdapter.extend();
+export default DS.ActiveModelAdapter.reopen({
+  host: 'http://localhost:3000',
+});
