@@ -9,9 +9,7 @@ Router.map(function() {
   //   this.route('new');
   // });
   this.resource('f1', function(){
-    this.resource('seasons');
     this.resource('season', {path: 'season/:season_id'}, function(){
-      this.resource('races');
       this.resource('race', {path: 'race/:race_number'}, function(){
         this.route('fastest-laps');
       });

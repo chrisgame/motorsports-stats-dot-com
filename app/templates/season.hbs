@@ -1,2 +1,7 @@
-<h3>Season</h3>
+<h3>{{id}}  Season</h3>
+<ul>
+{{#each race in races}}
+  <li>{{race.name}}</li>
+{{/each}}
+</ul>
 {{outlet}}
