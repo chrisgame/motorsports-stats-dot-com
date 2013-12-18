@@ -8,6 +8,8 @@ Router.map(function() {
   // this.resource('posts', function() {
   //   this.route('new');
   // });
+  this.route('seasons', {path: 'f1/seasons'});
+  this.route('races', {path: 'f1/season/:season_id/races'});
   this.resource('f1', function(){
     this.resource('season', {path: 'season/:season_id'}, function(){
       this.resource('race', {path: 'race/:race_number'}, function(){
