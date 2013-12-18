@@ -2,7 +2,7 @@
 <h3>Seasons</h3>
 <ul>
   {{#each model}}
-    <li>{{id}}</li>
+    <li>{{#link-to 'season' id }} {{id}} {{/link-to}}</li>
   {{/each}}
 </ul>
 {{outlet}}
