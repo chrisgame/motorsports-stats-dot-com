@@ -1,6 +1,19 @@
 <h3>Fastest Laps</h3>
-<ul>
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Car Number</th>
+    <th>Driver</th>
+    <th>Team</th>
+    <th>Lap</th>
+  </tr>
   {{#each model}}
-    <li>{{driver}}</li>
+    <tr>
+      <td>{{position}}</td>
+      <td>{{carNumber}}</td>
+      <td>{{driver}}</td>
+      <td>{{team}}</td>
+      <td>{{lap}}</td>
+    </tr>
   {{/each}}
-</ul>
+</table>
