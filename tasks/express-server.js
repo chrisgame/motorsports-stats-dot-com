@@ -3,19 +3,39 @@ module.exports = function(grunt) {
       lockFile = require('lockfile'),
       Helpers = require('./helpers'),
       fs = require('fs'),
-      path = require('path');
+      path = require('path'),
+      request = require('request');
 
   /**
   Task for serving the static files.
 
   Note: The expressServer:debug task looks for files in multiple directories.
   */
-  grunt.registerTask('expressServer', function(target) {
+  grunt.registerTask('expressServer', function(target, proxyMethodToUse) {
+    // Load namespace module before creating the server
+    require('express-namespace');
+
     var app = express(),
-        done = this.async();
+        done = this.async(),
+        proxyMethod = proxyMethodToUse || grunt.config('express-server.options.APIMethod');
 
     app.use(lock);
     app.use(express.compress());
+
+    if (proxyMethod === 'stub') {
+      grunt.log.writeln('Using API Stub');
+
+      // Load API stub routes
+      app.use(express.json());
+      app.use(express.urlencoded());
+      require('../api-stub/routes')(app);
+    } else if (proxyMethod === 'proxy') {
+      var proxyURL = grunt.config('express-server.options.proxyURL');
+      grunt.log.writeln('Proxying API requests to: ' + proxyURL);
+
+      // Use API proxy
+      app.all('/api/*', passThrough(proxyURL));
+    }
 
     if (target === 'debug') {
       // For `expressServer:debug`
@@ -26,6 +46,7 @@ module.exports = function(grunt) {
       }
 
       // These three lines simulate what the `copy:assemble` task does
+      app.use(static({ urlRoot: '/config', directory: 'config' }));
       app.use(static({ urlRoot: '/vendor', directory: 'vendor' }));
       app.use(static({ directory: 'public' }));
       app.use(static({ urlRoot: '/tests', directory: 'tests' })); // For test_helper.js and test_loader.js
@@ -40,7 +61,10 @@ module.exports = function(grunt) {
       app.use(static({ file: 'dist/index.html' })); // Gotta catch 'em all
     }
 
-    var port = process.env.PORT || 8000;
+    var port = parseInt(process.env.PORT || 8000, 10);
+    if (isNaN(port) || port < 1 || port > 65535) {
+      grunt.fail.fatal('The PORT environment variable of ' + process.env.PORT + ' is not valid.');
+    }
     app.listen(port);
     grunt.log.ok('Started development server on port %d.', port);
     if (!this.flags.keepalive) { done(); }
@@ -82,6 +106,12 @@ module.exports = function(grunt) {
           grunt.verbose.ok('Served: ' + filePath);
         });
       });
+    };
+  }
+
+  function passThrough(target) {
+    return function(req, res) {
+      req.pipe(request(target+req.url)).pipe(res);
     };
   }
 };
