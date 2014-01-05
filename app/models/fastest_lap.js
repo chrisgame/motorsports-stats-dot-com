@@ -5,7 +5,7 @@ export default DS.Model.extend({
   driver: DS.attr('string'),
   team: DS.attr('string'),
   lap: DS.attr('number'),
-//  timeOfDay: DS.attr('time'),
-//  averageSpeed: DS.attr('decimal'),
-//  lapTime: DS.attr('decimal')
+  timeOfDay: DS.attr('string'),
+  averageSpeed: DS.attr('number'),
+  lapTime: DS.attr('duration')
 });
