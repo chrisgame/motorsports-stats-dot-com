@@ -13,6 +13,7 @@ Router.map(function() {
   this.resource('f1', function(){
     this.resource('season', {path: 'season/:season_id'}, function(){
       this.resource('race', {path: 'race/:race_number'}, function(){
+        this.resource('result', {path: 'results'});
         this.resource('fastest-lap', {path: 'fastest-laps'});
       });
     });
