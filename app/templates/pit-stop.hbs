@@ -1,0 +1,25 @@
+<h3>Results</h3>
+<table>
+  <tr>
+    <th>Stops</th>
+    <th>Car Number</th>
+    <th>Driver</th>
+    <th>Team</th>
+    <th>Lap</th>
+    <th>Time Of Day</th>
+    <th>Time</th>
+    <th>Total Pit Time</th>
+  </tr>
+  {{#each model}}
+    <tr>
+      <td>{{stops}}</td>
+      <td>{{carNumber}}</td>
+      <td>{{driver}}</td>
+      <td>{{team}}</td>
+      <td>{{lap}}</td>
+      <td>{{timeOfDay}}</td>
+      <td>{{time}}</td>
+      <td>{{totalPitTime}}</td>
+    </tr>
+  {{/each}}
+</table>
