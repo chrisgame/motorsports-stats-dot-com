@@ -1,5 +1,5 @@
 export default DS.Model.extend({
-  race: DS.belongsTo('race'),
+  round: DS.belongsTo('round'),
   stops: DS.attr('number'),
   carNumber: DS.attr('number'),
   driver: DS.attr('string'),

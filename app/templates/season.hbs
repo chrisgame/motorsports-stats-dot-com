@@ -1,7 +1,7 @@
 <h3>{{id}}  Season</h3>
 <ul>
-{{#each race in races}}
-  <li>{{#link-to 'race' race.id}} {{race.name}} {{/link-to}}</li>
+{{#each round in rounds}}
+  <li>{{#link-to 'round' round.id}} {{round.name}} {{/link-to}}</li>
 {{/each}}
 </ul>
 {{outlet}}

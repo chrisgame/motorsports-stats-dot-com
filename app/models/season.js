@@ -1,3 +1,3 @@
 export default DS.Model.extend({
-  races: DS.hasMany('race', {async:true})
+  rounds: DS.hasMany('round', {async:true})
 });
