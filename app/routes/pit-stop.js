@@ -1,8 +1,8 @@
 export default Ember.Route.extend({
   beforeModel: function() {
-    this.set('round', this.modelFor('round'));
+    this.set('race', this.modelFor('race'));
   },
   model: function(params){
-    return this.get('store').find('pitStop', { round_id: this.get('round').id });
+    return this.get('store').find('pitStop', { race_id: this.get('race').id });
   }
 });
