@@ -1,7 +1,7 @@
 export default DS.Model.extend({
   season: DS.belongsTo('season'),
   name: DS.attr('string'),
-  fastest_laps: DS.hasMany('fastest_lap', {async:true}),
-  pit_stops: DS.hasMany('pit_stop', {async:true}),
-  results: DS.hasMany('result', {async:true})
+  practices: DS.hasMany('practice', {async:true}),
+  qualifies: DS.hasMany('qualify', {async:true}),
+  race: DS.belongsTo('race', {async:true})
 });

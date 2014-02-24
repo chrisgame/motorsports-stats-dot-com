@@ -1,7 +1,13 @@
 <h3>{{name}}</h3>
 <ul>
-  <li>{{#link-to 'result' id}} Results {{/link-to}}</li>
-  <li>{{#link-to 'fastest-lap' id}} Fastest Laps {{/link-to}}</li>
-  <li>{{#link-to 'pit-stop' id}} Pit Stop {{/link-to}}</li>
+{{#each practice in practices}}
+  {{practice.id}}
+  <li>{{#link-to 'practice' practice.id}} Practice {{/link-to}}</li>
+{{/each}}
+{{#each qualify in qualifies}}
+  {{qualify.id}}
+  <li>{{#link-to 'qualify' qualify.id}} Qualify {{/link-to}}</li>
+{{/each}}
+  <li>{{#link-to 'race' race.id}} Race {{/link-to}}</li>
 </ul>
 {{outlet}}

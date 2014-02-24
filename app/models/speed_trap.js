@@ -1,11 +1,10 @@
 export default DS.Model.extend({
-  round: DS.belongsTo('round'),
+  practice: DS.belongsTo('practice'),
+  day: DS.attr('string'),
+  session: DS.attr('string'),
   position: DS.attr('number'),
   carNumber: DS.attr('number'),
   driver: DS.attr('string'),
-  team: DS.attr('string'),
-  lap: DS.attr('number'),
   timeOfDay: DS.attr('string'),
-  averageSpeed: DS.attr('number'),
-  time: DS.attr('duration')
+  speed: DS.attr('string')
 });
