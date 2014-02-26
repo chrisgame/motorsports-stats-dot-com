@@ -15,10 +15,10 @@ Router.map(function() {
           this.resource('practice-speed-trap', {path: 'speed-traps'});
           this.resource('practice-result', {path: 'results'});
         });
-        this.resource('qualify', {path: 'qualifying-session/:qualifying_id'}, function(){
-          this.resource('qualifying-best-sector', {path: 'best-sectors'});
-          this.resource('qualifying-speed-trap', {path: 'speed-traps'});
-          this.resource('qualifying-result', {path: 'results'});
+        this.resource('qualify', {path: 'qualifying-session/:qualify_id'}, function(){
+          this.resource('qualify-best-sector', {path: 'best-sectors'});
+          this.resource('qualify-speed-trap', {path: 'speed-traps'});
+          this.resource('qualify-result', {path: 'results'});
         });
         this.resource('race', {path: 'race/:race_id'}, function(){
           this.resource('race-fastest-lap', {path: 'fastest-laps'});

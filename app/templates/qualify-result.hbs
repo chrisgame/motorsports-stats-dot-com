@@ -1,14 +1,15 @@
-<h3>Fastest Laps</h3>
+<h3>Results</h3>
 <table>
   <tr>
     <th>Position</th>
     <th>Car Number</th>
     <th>Driver</th>
     <th>Team</th>
-    <th>Lap</th>
-    <th>Time Of Day</th>
-    <th>Average Speed</th>
-    <th>Time</th>
+    <th>Laps</th>
+    <th>Time Or Retirement</th>
+    <th>Q1</th>
+    <th>Q2</th>
+    <th>Q3</th>
   </tr>
   {{#each model}}
     <tr>
@@ -16,10 +17,11 @@
       <td>{{carNumber}}</td>
       <td>{{driver}}</td>
       <td>{{team}}</td>
-      <td>{{lap}}</td>
-      <td>{{timeOfDay}}</td>
-      <td>{{averageSpeed}}</td>
-      <td>{{time}}</td>
+      <td>{{laps}}</td>
+      <td>{{timeOrRetirement}}</td>
+      <td>{{q1}}</td>
+      <td>{{q2}}</td>
+      <td>{{q3}}</td>
     </tr>
   {{/each}}
 </table>

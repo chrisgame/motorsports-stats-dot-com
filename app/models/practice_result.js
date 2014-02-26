@@ -6,6 +6,5 @@ export default DS.Model.extend({
   team: DS.attr('string'),
   laps: DS.attr('number'),
   timeOrRetirement: DS.attr('string'),
-  grid: DS.attr('string'),
-  points: DS.attr('string')
+  gap: DS.attr('string'),
 });

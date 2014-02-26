@@ -1,24 +1,18 @@
-<h3>Fastest Laps</h3>
+<h3>Best Sectors</h3>
 <table>
   <tr>
+    <th>Sector</th>
     <th>Position</th>
     <th>Car Number</th>
     <th>Driver</th>
-    <th>Team</th>
-    <th>Lap</th>
-    <th>Time Of Day</th>
-    <th>Average Speed</th>
     <th>Time</th>
   </tr>
   {{#each model}}
     <tr>
+      <td>{{sector}}</td>
       <td>{{position}}</td>
       <td>{{carNumber}}</td>
       <td>{{driver}}</td>
-      <td>{{team}}</td>
-      <td>{{lap}}</td>
-      <td>{{timeOfDay}}</td>
-      <td>{{averageSpeed}}</td>
       <td>{{time}}</td>
     </tr>
   {{/each}}
