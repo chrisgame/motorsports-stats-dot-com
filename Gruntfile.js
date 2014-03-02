@@ -160,6 +160,11 @@ module.exports = function(grunt) {
                      'htmlmin:dist' // Removes comments and whitespace
                      ]));
 
+  grunt.registerTask('deployToPreProd', "Generate assets with build:dist and deploy to pre prod bucket on s3", filterAvailable([
+                     'dist',
+                     's3'
+                     ]));
+
   // Parallelize most of the build process
   _.merge(config, {
     concurrent: {
