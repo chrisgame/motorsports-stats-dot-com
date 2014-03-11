@@ -1,5 +1,5 @@
 export default DS.Model.extend({
-  round: DS.belongsTo('round'),
+  qualify_session: DS.belongsTo('qualify_session'),
   position: DS.attr('string'),
   carNumber: DS.attr('number'),
   driver: DS.attr('string'),

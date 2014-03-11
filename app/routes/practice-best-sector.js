@@ -1,9 +1,9 @@
 export default Ember.Route.extend({
   beforeModel: function() {
-    this.set('practice', this.modelFor('practice'));
+    this.set('practiceSession', this.modelFor('practice-session'));
   },
   model: function(params){
-    return this.get('store').find('bestSector', { best_sectorable_id: this.get('practice').id , best_sectorable_type: 'Practice'});
+    return this.get('store').find('bestSector', { best_sector_id: this.get('practiceSession').id , best_sector_type: 'practice'});
   },
   renderTemplate: function() {
     this.render('best-sector');

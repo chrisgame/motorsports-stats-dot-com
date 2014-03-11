@@ -1,6 +1,4 @@
 export default DS.Model.extend({
   round: DS.belongsTo('round'),
-  best_sectors: DS.hasMany('best_sector', {async:true}),
-  speed_traps: DS.hasMany('speed_trap', {async:true}),
-  results: DS.hasMany('practice_result', {async:true})
+  practice_sessions: DS.hasMany('practice_session', {async:true})
 });

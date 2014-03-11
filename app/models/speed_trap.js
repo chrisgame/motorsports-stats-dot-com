@@ -1,5 +1,4 @@
 export default DS.Model.extend({
-  practice: DS.belongsTo('practice'),
   day: DS.attr('string'),
   session: DS.attr('string'),
   position: DS.attr('number'),

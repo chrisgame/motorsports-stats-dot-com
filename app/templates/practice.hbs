@@ -1,7 +1,7 @@
-<h4>Practice</h4>
+<h4>Practice Sessions</h4>
 <ul>
-  <li>{{#link-to 'practice-best-sector' id}} Best Sectors {{/link-to}}</li>
-  <li>{{#link-to 'practice-speed-trap' id}} Speed Traps {{/link-to}}</li>
-  <li>{{#link-to 'practice-result' id}} Results {{/link-to}}</li>
+{{#each practice_session in practice_sessions}}
+  <li>{{#link-to 'practice-session' practice_session.id}} {{practice_session.day}} {{practice_session.session}} {{/link-to}}</li>
+{{/each}}
 </ul>
 {{outlet}}
