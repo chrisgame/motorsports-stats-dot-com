@@ -1,5 +1,10 @@
 export default Ember.Route.extend({
   model: function(params){
-    return this.get('store').find('round', params.round_id);
+    debugger;
+    this.modelFor('season').then(function(season){
+      console.log(season.get('rounds'));
+    });
+    console.log(this.modelFor('season').get('rounds'));
+    return this.get('store').find('round', params.round);
   }
 });
