@@ -1,7 +1,9 @@
-<h4>Practice Sessions</h4>
-<ul>
-{{#each practice_session in practice_sessions}}
-  <li>{{#link-to 'practice-session' practice_session.id}} {{practice_session.day}} {{practice_session.session}} {{/link-to}}</li>
-{{/each}}
-</ul>
+<div class="col-md-1">
+  <h3>Practice</h3>
+  <ul>
+  {{#each practice_session in practice_sessions}}
+    <li>{{#link-to 'practice-session' practice_session.id}} {{practice_session.day}} {{practice_session.session}} {{/link-to}}</li>
+  {{/each}}
+  </ul>
+</div>
 {{outlet}}

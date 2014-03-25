@@ -1,7 +1,9 @@
-<h4>{{day}} {{session}}</h4>
-<ul>
-  <li>{{#link-to 'qualify-best-sector' id}} Best Sectors {{/link-to}}</li>
-  <li>{{#link-to 'qualify-speed-trap' id}} Speed Traps {{/link-to}}</li>
-  <li>{{#link-to 'qualify-result' id}} Results {{/link-to}}</li>
-</ul>
+<div class="col-md-1">
+  <h3>{{day}} {{session}}</h3>
+  <ul>
+    <li>{{#link-to 'qualify-best-sector' id}} Best Sectors {{/link-to}}</li>
+    <li>{{#link-to 'qualify-speed-trap' id}} Speed Traps {{/link-to}}</li>
+    <li>{{#link-to 'qualify-result' id}} Results {{/link-to}}</li>
+  </ul>
+</div>
 {{outlet}}

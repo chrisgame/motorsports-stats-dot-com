@@ -1,8 +1,9 @@
-<h2>F1</h2>
-<h3>Seasons</h3>
-<ul>
-  {{#each model}}
-    <li>{{#link-to 'season' id }} {{id}} {{/link-to}}</li>
-  {{/each}}
-</ul>
+<div class="col-md-1">
+  <h3>F1</h3>
+  <ul>
+    {{#each model}}
+      <li>{{#link-to 'season' id }} {{id}} {{/link-to}}</li>
+    {{/each}}
+  </ul>
+</div>
 {{outlet}}

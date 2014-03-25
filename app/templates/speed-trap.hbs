@@ -1,19 +1,21 @@
-<h3>Speed Traps</h3>
-<table>
-  <tr>
-    <th>Position</th>
-    <th>Car Number</th>
-    <th>Driver</th>
-    <th>Speed</th>
-    <th>Time Of Day</th>
-  </tr>
-  {{#each model}}
+<div class="col-md-7">
+  <h3>Speed Traps</h3>
+  <table>
     <tr>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td>{{speed}}</td>
-      <td>{{timeOfDay}}</td>
+      <th>Position</th>
+      <th>Car Number</th>
+      <th>Driver</th>
+      <th>Speed</th>
+      <th>Time Of Day</th>
     </tr>
-  {{/each}}
-</table>
+    {{#each model}}
+      <tr>
+        <td>{{position}}</td>
+        <td>{{carNumber}}</td>
+        <td>{{driver}}</td>
+        <td>{{speed}}</td>
+        <td>{{timeOfDay}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>

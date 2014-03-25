@@ -1,8 +1,15 @@
-/* Put your CSS here */
-html, body {
-    margin: 20px;
+.container {
+  width: 100%;
+}
+.container ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-@keyframes domChanged { from { background: yellow; } }
-@-webkit-keyframes domChanged { from { background: yellow; } }
-.ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+.container h3 {
+  font-size: 18px;
+}
+
+.container table {
+  width: 100%;
+}

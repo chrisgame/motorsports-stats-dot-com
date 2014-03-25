@@ -1,25 +1,27 @@
-<h3>Results</h3>
-<table>
-  <tr>
-    <th>Position</th>
-    <th>Car Number</th>
-    <th>Driver</th>
-    <th>Team</th>
-    <th>Laps</th>
-    <th>Time Or Retirement</th>
-    <th>Grid</th>
-    <th>Points</th>
-  </tr>
-  {{#each model}}
+<div class="col-md-7">
+  <h3>Results</h3>
+  <table>
     <tr>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td>{{team}}</td>
-      <td>{{laps}}</td>
-      <td>{{timeOrRetirement}}</td>
-      <td>{{grid}}</td>
-      <td>{{points}}</td>
+      <th>Position</th>
+      <th>Car Number</th>
+      <th>Driver</th>
+      <th>Team</th>
+      <th>Laps</th>
+      <th>Time Or Retirement</th>
+      <th>Grid</th>
+      <th>Points</th>
     </tr>
-  {{/each}}
-</table>
+    {{#each model}}
+      <tr>
+        <td>{{position}}</td>
+        <td>{{carNumber}}</td>
+        <td>{{driver}}</td>
+        <td>{{team}}</td>
+        <td>{{laps}}</td>
+        <td>{{timeOrRetirement}}</td>
+        <td>{{grid}}</td>
+        <td>{{points}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
