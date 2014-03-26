@@ -24,7 +24,7 @@ Router.map(function() {
             this.resource('qualify-result', {path: 'results'});
           });
         });
-        this.resource('race', {path: 'race/:race_id'}, function(){
+        this.resource('race', {path: ':race'}, function(){
           this.resource('race-fastest-lap', {path: 'fastest-laps'});
           this.resource('race-pit-stop', {path: 'pit-stops'});
           this.resource('race-result', {path: 'results'});
