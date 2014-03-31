@@ -17,8 +17,8 @@ Router.map(function() {
             this.resource('practice-result', {path: 'results'});
           });
         });
-        this.resource('qualify', {path: 'qualifying/:qualify_id'}, function(){
-          this.resource('qualify-session', {path: 'qualifying-session/:qualify_session_id'}, function(){
+        this.resource('qualify', {path: ':qualify'}, function(){
+          this.resource('qualify-session', {path: ':qualify_session'}, function(){
             this.resource('qualify-best-sector', {path: 'best-sectors'});
             this.resource('qualify-speed-trap', {path: 'speed-traps'});
             this.resource('qualify-result', {path: 'results'});

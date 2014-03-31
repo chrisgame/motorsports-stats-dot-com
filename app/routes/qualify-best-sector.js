@@ -1,9 +1,7 @@
 export default Ember.Route.extend({
-  beforeModel: function() {
-    this.set('qualifySession', this.modelFor('qualify-session'));
-  },
   model: function(params) {
-    return this.get('store').find('bestSector', { best_sector_id: this.get('qualifySession').id , best_sector_type: 'qualify'});
+    var qualifying_session_id = parseInt(this.modelFor('qualify-session').get('data.id'));
+    return this.get('store').find('bestSector', { best_sector_id: qualifying_session_id, best_sector_type: 'qualify'});
   },
   renderTemplate: function() {
     this.render('best-sector');
