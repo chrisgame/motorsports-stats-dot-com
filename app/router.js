@@ -10,8 +10,8 @@ Router.map(function() {
   this.resource('f1', function(){
     this.resource('season', {path: ':season_id'}, function(){
       this.resource('round', {path: ':round'}, function(){
-        this.resource('practice', {path: 'practice/:practice_id'}, function(){
-          this.resource('practice-session', {path: 'practice-session/:practice_session_id'}, function(){
+        this.resource('practice', {path: ':practice'}, function(){
+          this.resource('practice-session', {path: ':practice_session'}, function(){
             this.resource('practice-best-sector', {path: 'best-sectors'});
             this.resource('practice-speed-trap', {path: 'speed-traps'});
             this.resource('practice-result', {path: 'results'});
