@@ -1,8 +1,6 @@
 export default Ember.Route.extend({
-  beforeModel: function() {
-    this.set('practiceSession', this.modelFor('practice-session'));
-  },
   model: function(params){
-    return this.get('store').find('practiceResult', { practice_session_id: this.get('practiceSession').id});
+    var practice_session_id = parseInt(this.modelFor('practice-session').id);
+    return this.get('store').find('practiceResult', { practice_session_id: practice_session_id });
   }
 });

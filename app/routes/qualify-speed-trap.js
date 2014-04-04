@@ -1,9 +1,7 @@
 export default Ember.Route.extend({
-  beforeModel: function() {
-    this.set('qualifySession', this.modelFor('qualify-session'));
-  },
   model: function(params) {
-    return this.get('store').find('speedTrap', { speed_trap_id: this.get('qualifySession').id , speed_trap_type: 'qualify'});
+    var qualifying_session_id = parseInt(this.modelFor('qualify-session').get('data.id'));
+    return this.get('store').find('speedTrap', { speed_trap_id: qualifying_session_id, speed_trap_type: 'qualify'});
   },
   renderTemplate: function() {
     this.render('speed-trap');

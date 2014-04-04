@@ -1,5 +1,6 @@
 export default Ember.Route.extend({
   model: function(params){
-    return this.get('store').find('qualify', params.qualify_id);
+    var qualify_id = parseInt(this.modelFor('round').get('data.qualify').id);
+    return this.get('store').find('qualify', qualify_id);
   }
 });
