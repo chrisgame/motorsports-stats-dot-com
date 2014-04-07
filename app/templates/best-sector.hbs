@@ -1,21 +1,19 @@
-<div class="col-md-7">
-  <h3>Best Sectors</h3>
-  <table>
+<h3>Best Sectors</h3>
+<table>
+  <tr>
+    <th>Sector</th>
+    <th>Position</th>
+    <th>Car Number</th>
+    <th>Driver</th>
+    <th>Time</th>
+  </tr>
+  {{#each model}}
     <tr>
-      <th>Sector</th>
-      <th>Position</th>
-      <th>Car Number</th>
-      <th>Driver</th>
-      <th>Time</th>
+      <td>{{sector}}</td>
+      <td>{{position}}</td>
+      <td>{{carNumber}}</td>
+      <td>{{driver}}</td>
+      <td>{{time}}</td>
     </tr>
-    {{#each model}}
-      <tr>
-        <td>{{sector}}</td>
-        <td>{{position}}</td>
-        <td>{{carNumber}}</td>
-        <td>{{driver}}</td>
-        <td>{{time}}</td>
-      </tr>
-    {{/each}}
-  </table>
-</div>
+  {{/each}}
+</table>

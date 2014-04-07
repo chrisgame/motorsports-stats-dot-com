@@ -6,6 +6,6 @@ export default Ember.Route.extend({
     return this.get('store').find('bestSector', { best_sector_id: this.get('qualifySession').id , best_sector_type: 'qualify'});
   },
   renderTemplate: function() {
-    this.render('best-sector');
+    this.render('best-sector', { outlet: 'results' });
   }
 });

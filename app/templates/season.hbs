@@ -1,4 +1,4 @@
-<div class="col-md-1">
+<div class="col-md-2">
   <h3>{{id}}</h3>
   <ul>
   {{#each round in rounds}}
@@ -6,4 +6,11 @@
   {{/each}}
   </ul>
 </div>
-{{outlet}}
+<div class="col-md-2">
+  {{outlet round}}
+  {{outlet sessions}}
+  {{outlet session}}
+</div>
+<div class="col-md-7">
+  {{outlet results}}
+</div>

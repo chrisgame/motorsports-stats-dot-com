@@ -6,6 +6,6 @@ export default Ember.Route.extend({
     return this.get('store').find('speedTrap', { speed_trap_id: this.get('practiceSession').id, speed_trap_type: 'practice'});
   },
   renderTemplate: function() {
-    this.render('speed-trap');
+    this.render('speed-trap', { outlet: 'results' });
   }
 });

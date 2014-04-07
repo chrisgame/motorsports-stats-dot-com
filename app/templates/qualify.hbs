@@ -1,9 +1,6 @@
-<div class="col-md-1">
-  <h3>Qualifying</h3>
-  <ul>
-  {{#each qualify_session in qualify_sessions}}
-    <li>{{#link-to 'qualify-session' qualify_session.id}} {{qualify_session.day}} {{qualify_session.session}} {{/link-to}}</li>
-  {{/each}}
-  </ul>
-</div>
-{{outlet}}
+<h3>Qualifying</h3>
+<ul>
+{{#each qualify_session in qualify_sessions}}
+  <li>{{#link-to 'qualify-session' qualify_session.id}} {{qualify_session.day}} {{qualify_session.session}} {{/link-to}}</li>
+{{/each}}
+</ul>
