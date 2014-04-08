@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+.container a {
+  color: gray;
+}
+
 .container table {
   width: 100%;
 }
