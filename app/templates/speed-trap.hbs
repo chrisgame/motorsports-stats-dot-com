@@ -4,16 +4,16 @@
     <th>Position</th>
     <th>Car Number</th>
     <th>Driver</th>
-    <th>Speed</th>
-    <th>Time Of Day</th>
+    <th class="speed">Speed</th>
+    <th class="timeOfDay">Time Of Day</th>
   </tr>
   {{#each model}}
     <tr>
       <td>{{position}}</td>
       <td>{{carNumber}}</td>
       <td>{{driver}}</td>
-      <td>{{speed}}</td>
-      <td>{{timeOfDay}}</td>
+      <td class="speed">{{speed}}</td>
+      <td class="timeOfDay">{{timeOfDay}}</td>
     </tr>
   {{/each}}
 </table>

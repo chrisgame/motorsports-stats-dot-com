@@ -5,9 +5,9 @@
     <th>Car Number</th>
     <th>Driver</th>
     <th>Team</th>
-    <th>Laps</th>
-    <th>Time Or Retirement</th>
-    <th>Gap</th>
+    <th class="laps">Laps</th>
+    <th class="time">Time Or Retirement</th>
+    <th class="gap">Gap</th>
   </tr>
   {{#each model}}
     <tr>
@@ -15,9 +15,9 @@
       <td>{{carNumber}}</td>
       <td>{{driver}}</td>
       <td>{{team}}</td>
-      <td>{{laps}}</td>
-      <td>{{timeOrRetirement}}</td>
-      <td>{{gap}}</td>
+      <td class="laps">{{laps}}</td>
+      <td class="time">{{timeOrRetirement}}</td>
+      <td class="gap">{{gap}}</td>
     </tr>
   {{/each}}
 </table>
