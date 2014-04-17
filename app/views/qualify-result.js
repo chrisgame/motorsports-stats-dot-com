@@ -1,32 +1,20 @@
 export default Ember.View.extend({
   templateName: 'qualify_result',
 
+  removeColumnWhenNoDataIn: function(selector){
+      if (this.$('td.'+selector).text().length === 0){ 
+        this.$('th.'+selector).remove(); 
+        this.$('td.'+selector).remove(); 
+      }
+  },
+
   didInsertElement: function(){
     this._super();
     
-    if(this.$('td.timeOrRetirement').text().length == 0){
-      this.$('th.timeOrRetirement').remove(); 
-      this.$('td.timeOrRetirement').remove(); 
-    }
-
-    if(this.$('td.q1').text().length == 0){
-      this.$('th.q1').remove(); 
-      this.$('td.q1').remove(); 
-    }
-
-    if(this.$('td.q2').text().length == 0){
-      this.$('th.q2').remove(); 
-      this.$('td.q2').remove(); 
-    }
-    
-    if(this.$('td.q3').text().length == 0){
-      this.$('th.q3').remove(); 
-      this.$('td.q3').remove(); 
-    }
-
-    if(this.$('td.laps').text().length == 0){
-      this.$('th.laps').remove(); 
-      this.$('td.laps').remove(); 
-    }
+    this.removeColumnWhenNoDataIn('timeOrRetirement');
+    this.removeColumnWhenNoDataIn('q1');
+    this.removeColumnWhenNoDataIn('q2');
+    this.removeColumnWhenNoDataIn('q3');
+    this.removeColumnWhenNoDataIn('laps');
   }
 });
