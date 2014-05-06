@@ -1,3 +1,6 @@
+#!/bin/sh
+':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
+
 /**
  * Example: node deploy.js
  * 
@@ -7,14 +10,19 @@
  * 
  * References: Ken Tabor (NodeJS Deploying Files to AWS S3)[http://blog.katworksgames.com/2014/01/26/nodejs-deploying-files-to-aws-s3/]
  */
- 
+
+var args = process.argv.slice(2);
+var bucketName = args[0].toUpperCase()+'_BUCKET_NAME'
+var buckets = {"PRE_PRODUCTION_BUCKET_NAME":process.env.MOTORSPORTS_STATS_PRE_PROD_BUCKET,
+               "PRODUCTION_BUCKET_NAME":process.env.MOTORSPORTS_STATS_PROD_BUCKET}
+
 var aws = require('aws-sdk');
 
 var s3 = new aws.S3();
 var fs = require('fs');
-var BUCKET_NAME = process.env.MOTORSPORTS_STATS_PRE_PROD_BUCKET;
 
 function deployDist() {
+  console.log('Deploying to '+buckets[bucketName]);
   var dir = 'dist/';
   var filelist = getFileList(dir);
 
@@ -24,7 +32,7 @@ function deployDist() {
     var remotefilename = entry.replace(/^dist\//, '');
     var filename = './' + entry;
 
-    upload(remotefilename, filename, BUCKET_NAME);
+    upload(remotefilename, filename, buckets[bucketName]);
   });
 }
 
