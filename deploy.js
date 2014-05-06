@@ -5,10 +5,14 @@
  * Example: node deploy.js
  * 
  * Getting Started
- *    Change BUCKET_NAME
- *    Create AwsConfig.json in same directory as deploy.js
+ *    Set the following environment variables:
+ *    AWS_SECRET_ACCESS_KEY=
+ *    AWS_ACCESS_KEY_ID=
+ *    AWS_REGION=eu-west-1
  * 
- * References: Ken Tabor (NodeJS Deploying Files to AWS S3)[http://blog.katworksgames.com/2014/01/26/nodejs-deploying-files-to-aws-s3/]
+ * References: 
+ * Alvin Crespoi (An S3 deploy script for ember-cli)[https://gist.github.com/alvincrespo/10335555]
+ * Ken Tabor (NodeJS Deploying Files to AWS S3)[http://blog.katworksgames.com/2014/01/26/nodejs-deploying-files-to-aws-s3/]
  */
 
 var args = process.argv.slice(2);
