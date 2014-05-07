@@ -1,10 +1,9 @@
-var Router = Ember.Router.extend(); // ensure we don't share routes between all Router instances
+var Router = Ember.Router.extend({
+  rootURL: ENV.rootURL,
+  location: 'auto'
+});
 
 Router.map(function() {
-  this.route('f1-fastest-laps');
-  this.route('multi-series-line');
-
-
   this.route('seasons', {path: 'f1/seasons'});
   this.route('rounds', {path: 'f1/season/:season_id/rounds'});
   this.resource('f1', function(){
@@ -32,10 +31,6 @@ Router.map(function() {
       });
     });
   });
-});
-
-Router.reopen({
-  location: 'history'
 });
 
 export default Router;

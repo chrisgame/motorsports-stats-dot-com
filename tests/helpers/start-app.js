@@ -1,5 +1,4 @@
-import Application from 'appkit/app';
-import Router from 'appkit/router';
+var Router = require('motorsports-stats-dot-com/router')['default'];
 
 function startApp(attrs) {
   var App;
@@ -16,7 +15,7 @@ function startApp(attrs) {
   });
 
   Ember.run(function(){
-    App = Application.create(attributes);
+    App = require('motorsports-stats-dot-com/main')['default']('motorsports-stats-dot-com', attributes);
     App.setupForTesting();
     App.injectTestHelpers();
   });
