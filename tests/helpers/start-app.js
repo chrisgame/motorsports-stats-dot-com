@@ -1,6 +1,8 @@
-var Router = require('motorsports-stats-dot-com/router')['default'];
+/* global require */
 
-function startApp(attrs) {
+var Application = require('motorsports-stats-dot-com/app')['default'];
+
+export default function startApp(attrs) {
   var App;
 
   var attributes = Ember.merge({
@@ -10,12 +12,8 @@ function startApp(attrs) {
     LOG_VIEW_LOOKUPS: false
   }, attrs); // but you can override;
 
-  Router.reopen({
-    location: 'none'
-  });
-
   Ember.run(function(){
-    App = require('motorsports-stats-dot-com/main')['default']('motorsports-stats-dot-com', attributes);
+    App = Application.create(attributes);
     App.setupForTesting();
     App.injectTestHelpers();
   });
@@ -24,5 +22,3 @@ function startApp(attrs) {
 
   return App;
 }
-
-export default startApp;
