@@ -1,5 +1,5 @@
 export default Ember.Route.extend({
-  model: function(params) {
+  model: function() {
     return this.get('store').find('speedTrap', { speed_trap_id: this.modelFor('practice-session').id, speed_trap_type: 'practice'});
   },
   renderTemplate: function() {

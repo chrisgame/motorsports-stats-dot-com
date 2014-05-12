@@ -1,5 +1,5 @@
 export default Ember.Route.extend({
-  model: function(params){
+  model: function(){
     return this.get('store').find('practiceResult', { practice_session_id: this.modelFor('practice-session').id });
   },
   renderTemplate: function(){
