@@ -7,7 +7,8 @@ before_script:
 - npm install
 - bower install
 before_script: "echo in before script hook"
-after_script: "echo in after script hook"
+after_script: 
+- "echo in after script hook"
 - npm build
 deploy:
 - provider: s3
