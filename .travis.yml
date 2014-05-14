@@ -6,6 +6,7 @@ before_script:
 - npm install -g bower
 - npm install
 - bower install
+after_script: "echo in after script hook"
 deploy:
 - provider: s3
   skip_cleanup: true
