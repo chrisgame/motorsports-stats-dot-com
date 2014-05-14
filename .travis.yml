@@ -9,8 +9,8 @@ before_script:
 before_script: "echo in before script hook"
 script: 
 - "echo in script hook"
-- ember test
-- ember build --env production
+- npm test
+- npm build
 after_script: "echo in after script hook"
 deploy:
 - provider: s3
