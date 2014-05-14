@@ -7,7 +7,10 @@ before_script:
 - npm install
 - bower install
 before_script: "echo in before script hook"
-script: "echo in script hook"
+script: 
+- "echo in script hook"
+- ember test
+- ember build --env production
 after_script: "echo in after script hook"
 deploy:
 - provider: s3
@@ -24,3 +27,4 @@ deploy:
   endpoint:
     secure: MHro5KbfaPgVHm9frlIj5cAnFfSGVF4o3dYoD6Gu5lc2Tv2YVBf0QcawGhjPbOlB8lEbPz4cbDVSjTxAl9/xDAulc6lJ82BQT4RGJXxwz9n0EpIHaKiL94SQAGdnZgJh67q6dRnmDYdIks5eBYcD2H0VzQq9qnzoXfiCZL2rcSo=
 after_deploy: "echo in after deploy hook"
+after_success: "echo in after success hook"
