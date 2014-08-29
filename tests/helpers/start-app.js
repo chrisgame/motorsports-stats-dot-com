@@ -1,6 +1,8 @@
 /* global require */
 
 var Application = require('motorsports-stats-dot-com/app')['default'];
+var Router = require('motorsports-stats-dot-com/router')['default'];
+import Ember from 'ember';
 
 export default function startApp(attrs) {
   var App;
@@ -11,6 +13,10 @@ export default function startApp(attrs) {
     LOG_ACTIVE_GENERATION:false,
     LOG_VIEW_LOOKUPS: false
   }, attrs); // but you can override;
+
+  Router.reopen({
+    location: 'none'
+  });
 
   Ember.run(function(){
     App = Application.create(attributes);

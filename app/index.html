@@ -9,16 +9,18 @@
 
     {{BASE_TAG}}
 
-    <link rel="stylesheet" href="assets/bootstrap.css">
-    <link rel="stylesheet" href="assets/app.css">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/motorsports-stats-dot-com.css">
   </head>
   <body>
     <script>
-      window.ENV = {{ENV}};
+      window.MotorsportsStatsDotComENV = {{ENV}};
+      window.EmberENV = window.MotorsportsStatsDotComENV.EmberENV;
     </script>
-    <script src="assets/app.js"></script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/motorsports-stats-dot-com.js"></script>
     <script>
-      window.MotorsportsStatsDotCom = require('motorsports-stats-dot-com/app')['default'].create(ENV.APP);
+      window.MotorsportsStatsDotCom = require('motorsports-stats-dot-com/app')['default'].create(MotorsportsStatsDotComENV.APP);
     </script>
   </body>
 </html>
