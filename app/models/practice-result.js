@@ -1,3 +1,5 @@
+import DS from 'ember-data';
+
 export default DS.Model.extend({
   practice_session: DS.belongsTo('practice_session'),
   position: DS.attr('string'),

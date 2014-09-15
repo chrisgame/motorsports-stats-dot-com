@@ -1,3 +1,5 @@
+import DS from 'ember-data';
+
 export default DS.Model.extend({
   round: DS.belongsTo('round'),
   fastest_laps: DS.hasMany('fastest_lap', {async:true}),

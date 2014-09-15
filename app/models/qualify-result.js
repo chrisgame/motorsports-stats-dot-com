@@ -1,3 +1,5 @@
+import DS from 'ember-data';
+
 export default DS.Model.extend({
   qualify_session: DS.belongsTo('qualify_session'),
   position: DS.attr('string'),
