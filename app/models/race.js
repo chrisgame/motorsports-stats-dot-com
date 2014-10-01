@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   round: DS.belongsTo('round'),
-  fastest_laps: DS.hasMany('fastest_lap', {async:true}),
-  pit_stops: DS.hasMany('pit_stop', {async:true}),
-  results: DS.hasMany('race_result', {async:true})
+  fastest_laps: DS.hasMany('fastest-lap', {async:true}),
+  pit_stops: DS.hasMany('pit-stop', {async:true}),
+  results: DS.hasMany('race-result', {async:true})
 });

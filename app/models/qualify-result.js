@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  qualify_session: DS.belongsTo('qualify_session'),
+  qualify_session: DS.belongsTo('qualify-session'),
   position: DS.attr('string'),
   carNumber: DS.attr('number'),
   driver: DS.attr('string'),
