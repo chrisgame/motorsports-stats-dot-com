@@ -1,22 +1,20 @@
+---
 language: node_js
-node_js:
-- 0.1
-before_script:
-- npm install -g ember-cli
-- npm install -g bower
-- npm install
-- bower install
-deploy:
-- provider: s3
-  skip_cleanup: true
-  local-dir: dist
-  bucket:
-    secure: veM10EIaREJ+gVsR8ufVYFw4ArPWLjo4eL8PupGScZ13UdIfVBpA1Rm3n8wk4jD7QAy5i9Gs3SFCkRViezrsGbeCtk3hSm6AhVOhC+tvadUek21nZ4LYdM0XFf2wPejlI8Wck0+7BO5Bue+XFs71IDPkZuQ3eTGPiYu5/QDsGik=
-  secret_access_key:
-    secure: X1O2UT2/fa1oPWlnypaRdGIOaCgCc723TF10y2RCc1McnXmAMEWNf6jhvjrU43ZaAgAo0HfmeWWB8HTKN2+2n8rBqJU5PLyvx3gDGE7rCfoKR6hXTIC7dZD5hH669ucBiLK3GFVbPa/mptpNKMxvipLMJb/PRyFniquhI7T06p0=
-  access_key_id:
-    secure: kZbeKsEjyORKY9X7swGRa3stOJkREwq+q1A0yia5tOchy1kzw/Z4/htCmnffWhf9fAnba2Oxi7CdyPV9/LMrud887U5Po3OfWV2j7xz83h6sAjYBFvlkS85uXAph0IqbBmuVpfIq2G+YVUzPJOXYNTlLh6dd/mwDCkGtWkG1+fU=
-  region:
-    secure: pjZyfvfEJu6jZXBe51nKMIj3jDfh4NSMzJhmcHgXh8lSXvDTtYFVZhYgmbdgPgxSaxUk2RDkJ65ff2PzokunjPR4997xqGpC/pele4u9DBU7WUryVRiVoROc8ep8M477fL7e++kVJ80kJFF4phEIKBgQAZu9bKhsM9NYPSyYxfU=
-  endpoint:
-    secure: MHro5KbfaPgVHm9frlIj5cAnFfSGVF4o3dYoD6Gu5lc2Tv2YVBf0QcawGhjPbOlB8lEbPz4cbDVSjTxAl9/xDAulc6lJ82BQT4RGJXxwz9n0EpIHaKiL94SQAGdnZgJh67q6dRnmDYdIks5eBYcD2H0VzQq9qnzoXfiCZL2rcSo=
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - "npm config set spin false"
+  - "npm install -g npm@^2"
+
+install:
+  - npm install -g bower
+  - npm install
+  - bower install
+
+script:
+  - npm test
