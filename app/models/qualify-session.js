@@ -6,5 +6,5 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   best_sectors: DS.hasMany('best-sector', {async:true}),
   speed_traps: DS.hasMany('speed-trap', {async:true}),
-  results: DS.hasMany('qualify-result', {async:true})
+  qualify_results: DS.hasMany('qualify-result', {async:true})
 });
