@@ -7,15 +7,16 @@
 //   });
 // };
 
-var bodyParser = require('body-parser');
-var globSync   = require('glob').sync;
-var routes     = globSync('./routes/**/*.js', { cwd: __dirname }).map(require);
-
 module.exports = function(app) {
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({
-    extended: true
-  }));
+  var globSync   = require('glob').sync;
+  var mocks      = globSync('./mocks/**/*.js', { cwd: __dirname }).map(require);
+  var proxies    = globSync('./proxies/**/*.js', { cwd: __dirname }).map(require);
 
-  routes.forEach(function(route) { route(app); });
+  // Log proxy requests
+  var morgan  = require('morgan');
+  app.use(morgan('dev'));
+
+  mocks.forEach(function(route) { route(app); });
+  proxies.forEach(function(route) { route(app); });
+
 };
