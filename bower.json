@@ -12,7 +12,6 @@
     "jquery": "^1.11.1",
     "moment": "~2.6.0",
     "bootstrap": "~3.2.0",
-    "amdize": "0.0.3",
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1"
   }
