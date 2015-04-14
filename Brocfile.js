@@ -18,6 +18,6 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import('vendor/_amdize.js');
-app.import('vendor/moment/moment.js', { exports: { moment: ['default'] } });
-app.import('vendor/bootstrap/dist/css/bootstrap.css');
+app.import('bower_components/moment/moment.js', { exports: { moment: ['default'] } });
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 module.exports = app.toTree();
