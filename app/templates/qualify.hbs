@@ -1,6 +1,6 @@
 <h3>Qualifying</h3>
 <ul class="qualifying-sessions">
-{{#each qualify_session in qualify_sessions}}
+{{#each qualify_session in model.qualify_sessions}}
   <li>{{#link-to 'qualify-session' qualify_session.id}} {{qualify_session.day}} {{qualify_session.session}} {{/link-to}}</li>
 {{/each}}
 </ul>

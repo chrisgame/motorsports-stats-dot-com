@@ -10,16 +10,16 @@
     <th class="time">Time</th>
     <th class="totalPitTime">Total Pit Time</th>
   </tr>
-  {{#each model}}
+  {{#each pitStop in model}}
     <tr>
-      <td>{{stops}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td>{{team}}</td>
-      <td class="lap">{{lap}}</td>
-      <td class="timeOfDay">{{timeOfDay}}</td>
-      <td class="time">{{time}}</td>
-      <td class="totalPitTime">{{totalPitTime}}</td>
+      <td>{{pitStop.stops}}</td>
+      <td>{{pitStop.carNumber}}</td>
+      <td>{{pitStop.driver}}</td>
+      <td>{{pitStop.team}}</td>
+      <td class="lap">{{pitStop.lap}}</td>
+      <td class="timeOfDay">{{pitStop.timeOfDay}}</td>
+      <td class="time">{{pitStop.time}}</td>
+      <td class="totalPitTime">{{pitStop.totalPitTime}}</td>
     </tr>
   {{/each}}
 </table>

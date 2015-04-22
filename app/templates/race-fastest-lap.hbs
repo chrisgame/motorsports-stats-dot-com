@@ -10,16 +10,16 @@
     <th class="averageSpeed">Average Speed</th>
     <th class="time">Time</th>
   </tr>
-  {{#each model}}
+  {{#each fastestLap in model}}
     <tr>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td>{{team}}</td>
-      <td class="lap">{{lap}}</td>
-      <td class="timeOfDay">{{timeOfDay}}</td>
-      <td class="averageSpeed">{{averageSpeed}}</td>
-      <td class="time">{{time}}</td>
+      <td>{{fastestLap.position}}</td>
+      <td>{{fastestLap.carNumber}}</td>
+      <td>{{fastestLap.driver}}</td>
+      <td>{{fastestLap.team}}</td>
+      <td class="lap">{{fastestLap.lap}}</td>
+      <td class="timeOfDay">{{fastestLap.timeOfDay}}</td>
+      <td class="averageSpeed">{{fastestLap.averageSpeed}}</td>
+      <td class="time">{{fastestLap.time}}</td>
     </tr>
   {{/each}}
 </table>

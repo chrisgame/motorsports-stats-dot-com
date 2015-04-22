@@ -11,17 +11,17 @@
     <th class="q2">Q2</th>
     <th class="q3">Q3</th>
   </tr>
-  {{#each model}}
+  {{#each qualifyingResult in model}}
     <tr>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td>{{team}}</td>
-      <td class="laps">{{laps}}</td>
-      <td class="timeOrRetirement">{{timeOrRetirement}}</td>
-      <td class="q1">{{q1}}</td>
-      <td class="q2">{{q2}}</td>
-      <td class="q3">{{q3}}</td>
+      <td>{{qualifyingResult.position}}</td>
+      <td>{{qualifyingResult.carNumber}}</td>
+      <td>{{qualifyingResult.driver}}</td>
+      <td>{{qualifyingResult.team}}</td>
+      <td class="laps">{{qualifyingResult.laps}}</td>
+      <td class="timeOrRetirement">{{qualifyingResult.timeOrRetirement}}</td>
+      <td class="q1">{{qualifyingResult.q1}}</td>
+      <td class="q2">{{qualifyingResult.q2}}</td>
+      <td class="q3">{{qualifyingResult.q3}}</td>
     </tr>
   {{/each}}
 </table>

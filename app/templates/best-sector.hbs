@@ -7,13 +7,13 @@
     <th>Driver</th>
     <th class="time">Time</th>
   </tr>
-  {{#each model}}
+  {{#each bestSector in model}}
     <tr>
-      <td>{{sector}}</td>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td class="time">{{time}}</td>
+      <td>{{bestSector.sector}}</td>
+      <td>{{bestSector.position}}</td>
+      <td>{{bestSector.carNumber}}</td>
+      <td>{{bestSector.driver}}</td>
+      <td class="time">{{bestSector.time}}</td>
     </tr>
   {{/each}}
 </table>

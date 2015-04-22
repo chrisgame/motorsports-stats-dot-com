@@ -1,7 +1,7 @@
 <div class="col-md-2">
-  <h3>{{id}}</h3>
+  <h3>{{model.id}}</h3>
   <ul class="rounds">
-  {{#each round in rounds}}
+  {{#each round in model.rounds}}
     <li>{{#link-to 'round' round.id}} {{round.name}} {{/link-to}}</li>
   {{/each}}
   </ul>
