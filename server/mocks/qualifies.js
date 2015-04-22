@@ -5,7 +5,7 @@ module.exports = function(app) {
     res.send(
       {
           "qualify": {
-              "id": 898, 
+              "id": 898,
               "qualify_session_ids": [
                   207
               ]
