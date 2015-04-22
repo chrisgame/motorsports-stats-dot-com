@@ -5,6 +5,9 @@ export default Ember.Route.extend({
     return this.get('store').find('practice', params.practice_id);
   },
   renderTemplate: function(){
-    this.render({ outlet: 'sessions'});
+    this.render({
+      into: 'season',
+      outlet: 'sessions'
+    });
   }
 });
