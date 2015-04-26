@@ -4,13 +4,17 @@ import { test, moduleForModel } from 'ember-qunit';
 
 moduleForModel('fastest-lap', 'Fastest Lap', {
   needs: [
+    'model:season',
+    'model:practice',
+    'model:qualify',
+    'model:race',
     'model:fastest-lap',
     'model:round'
   ]
 });
 
-test('Fastest lap is a valid ember-data model', function() {
+test('Fastest lap is a valid ember-data model', function(assert) {
   var fastestLap = this.subject();
-  ok(fastestLap);
-  ok(fastestLap instanceof DS.Model);
+  assert.ok(fastestLap);
+  assert.ok(fastestLap instanceof DS.Model);
 });

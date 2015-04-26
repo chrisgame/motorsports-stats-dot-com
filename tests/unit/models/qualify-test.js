@@ -4,14 +4,20 @@ import { test, moduleForModel } from 'ember-qunit';
 
 moduleForModel('qualify', 'Qualify', {
   needs: [
-  'model:qualify',
+  'model:season',
   'model:round',
-  'model:qualify-session'
+  'model:practice',
+  'model:qualify',
+  'model:race',
+  'model:qualify-session',
+  'model:best-sector',
+  'model:speed-trap',
+  'model:qualify-result'
   ]
 });
 
-test('Qualify is a valid ember-data model', function() {
+test('Qualify is a valid ember-data model', function(assert) {
   var qualify = this.subject();
-  ok(qualify);
-  ok(qualify instanceof DS.Model);
+  assert.ok(qualify);
+  assert.ok(qualify instanceof DS.Model);
 });

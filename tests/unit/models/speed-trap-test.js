@@ -8,8 +8,8 @@ moduleForModel('speed-trap', 'Speed Trap', {
   ]
 });
 
-test('Speed trap is a valid ember-data model', function() {
+test('Speed trap is a valid ember-data model', function(assert) {
   var speedTrap = this.subject();
-  ok(speedTrap);
-  ok(speedTrap instanceof DS.Model);
+  assert.ok(speedTrap);
+  assert.ok(speedTrap instanceof DS.Model);
 });

@@ -4,14 +4,20 @@ import { test, moduleForModel } from 'ember-qunit';
 
 moduleForModel('practice', 'Practice', {
   needs: [
-  'model:practice',
+  'model:season',
   'model:round',
-  'model:practice-session'
+  'model:practice',
+  'model:qualify',
+  'model:race',
+  'model:practice-session',
+  'model:best-sector',
+  'model:speed-trap',
+  'model:practice-result'
   ]
 });
 
-test('Practice is a valid ember-data model', function() {
+test('Practice is a valid ember-data model', function(assert) {
   var practiceSession = this.subject();
-  ok(practiceSession);
-  ok(practiceSession instanceof DS.Model);
+  assert.ok(practiceSession);
+  assert.ok(practiceSession instanceof DS.Model);
 });

@@ -2,7 +2,7 @@ import { test, moduleFor } from 'ember-qunit';
 
 moduleFor('route:qualify-best-sector', 'Qualify Best Sector Route');
 
-test('It exists', function() {
+test('It exists', function(assert) {
   var route = this.subject();
-  ok(route);
+  assert.ok(route);
 });
