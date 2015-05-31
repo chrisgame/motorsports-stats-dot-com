@@ -1,6 +1,11 @@
 export default function() {
 
   this.get('/seasons');
+  this.get('/rounds/:id', function(db, request) {
+    var id = request.params.id;
+
+    return db.rounds.find(id);
+  })
 
   // These comments are here to help you get started. Feel free to delete them.
 
