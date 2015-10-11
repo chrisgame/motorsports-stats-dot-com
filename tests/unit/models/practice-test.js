@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 import { test, moduleForModel } from 'ember-qunit';
 
 moduleForModel('practice', 'Practice', {
@@ -10,8 +9,8 @@ moduleForModel('practice', 'Practice', {
   ]
 });
 
-test('Practice is a valid ember-data model', function() {
+test('Practice is a valid ember-data model', function(assert) {
   var practiceSession = this.subject();
-  ok(practiceSession);
-  ok(practiceSession instanceof DS.Model);
+  assert.ok(practiceSession);
+  assert.ok(practiceSession instanceof DS.Model);
 });
