@@ -1,11 +1,22 @@
-import { app, test } from 'ember-qunit';
+import Ember from 'ember';
+import { module, test } from 'qunit';
+import startApp from 'motorsports-stats-dot-com/tests/helpers/start-app';
 
-app('Acceptance | F1 | Results flow', {
+module('Acceptance | F1 - Results flow', {
+  beforeEach: function() {
+    this.application = startApp();
+  },
+
+  afterEach: function() {
+    Ember.run(this.application, 'destroy');
+  }
 });
 
 test('Navigation to a season', function(assert) {
   assert.expect(2);
-  visit('/f1').then(function() {
+
+  visit('/f1');
+  andThen(function() {
     assert.equal(find('.seasons').length, 1, 'Page contains a list of seasons');
     assert.equal(find('.seasons li').length, 2, 'List contains two seasons');
   });
