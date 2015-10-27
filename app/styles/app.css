@@ -1,3 +1,5 @@
+@import 'bootstrap.css';
+
 .container {
   width: 100%;
 }
@@ -18,21 +20,21 @@
   width: 100%;
 }
 
-.container table th.lap, 
-.container table th.laps, 
-.container table th.time, 
-.container table th.timeOrRetirement, 
-.container table th.totalTime, 
-.container table th.totalPitTime, 
-.container table th.totalTime, 
-.container table th.speed, 
-.container table th.averageSpeed, 
-.container table th.gap, 
-.container table th.q1, 
-.container table th.q2, 
-.container table th.q3, 
-.container table th.grid, 
-.container table th.points { 
+.container table th.lap,
+.container table th.laps,
+.container table th.time,
+.container table th.timeOrRetirement,
+.container table th.totalTime,
+.container table th.totalPitTime,
+.container table th.totalTime,
+.container table th.speed,
+.container table th.averageSpeed,
+.container table th.gap,
+.container table th.q1,
+.container table th.q2,
+.container table th.q3,
+.container table th.grid,
+.container table th.points {
   text-align: right;
 }
 
@@ -40,23 +42,23 @@
   text-align: center;
 }
 
-.container table td.lap, 
-.container table td.laps, 
-.container table td.time, 
-.container table td.timeOrRetirement, 
-.container table td.totalTime, 
-.container table td.totalPitTime, 
-.container table td.speed, 
-.container table td.averageSpeed, 
-.container table td.gap, 
-.container table td.q1, 
-.container table td.q2, 
-.container table td.q3, 
-.container table td.grid, 
+.container table td.lap,
+.container table td.laps,
+.container table td.time,
+.container table td.timeOrRetirement,
+.container table td.totalTime,
+.container table td.totalPitTime,
+.container table td.speed,
+.container table td.averageSpeed,
+.container table td.gap,
+.container table td.q1,
+.container table td.q2,
+.container table td.q3,
+.container table td.grid,
 .container table td.points {
   text-align: right;
 }
 
-.container table td.timeOfDay { 
+.container table td.timeOfDay {
   text-align: center;
 }
