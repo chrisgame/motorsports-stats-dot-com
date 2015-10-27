@@ -10,16 +10,16 @@
     <th class="averageSpeed">Average Speed</th>
     <th class="time">Time</th>
   </tr>
-  {{#each model}}
+  {{#each model as |result|}}
     <tr>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td>{{team}}</td>
-      <td class="lap">{{lap}}</td>
-      <td class="timeOfDay">{{timeOfDay}}</td>
-      <td class="averageSpeed">{{averageSpeed}}</td>
-      <td class="time">{{time}}</td>
+      <td>{{result.position}}</td>
+      <td>{{result.carNumber}}</td>
+      <td>{{result.driver}}</td>
+      <td>{{result.team}}</td>
+      <td class="lap">{{result.lap}}</td>
+      <td class="timeOfDay">{{result.timeOfDay}}</td>
+      <td class="averageSpeed">{{result.averageSpeed}}</td>
+      <td class="time">{{result.time}}</td>
     </tr>
   {{/each}}
 </table>
