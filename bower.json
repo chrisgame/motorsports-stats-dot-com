@@ -12,6 +12,9 @@
     "jquery": "^1.11.3",
     "bootstrap": "~3.2.0",
     "loader.js": "ember-cli/loader.js#3.2.0",
-    "qunit": "~1.17.1"
+    "qunit": "~1.17.1",
+    "pretender": "~0.10.1",
+    "lodash": "~3.7.0",
+    "Faker": "~3.0.0"
   }
 }
