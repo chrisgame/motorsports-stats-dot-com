@@ -1,4 +1,5 @@
 export default function() {
+  this.timing = 0; //no delay
 
   this.get('/seasons');
   this.get('rounds/:id');

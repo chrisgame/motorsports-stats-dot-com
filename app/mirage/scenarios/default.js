@@ -42,14 +42,20 @@ export default function(server) {
     race_result_ids: raceResults.mapBy('id')
   });
 
-  const rounds = server.createList('round', 1, {
-    practice_id: practice.id,
-    qualify_id: qualify.id,
-    race_id: race.id
-  });
+  server.logging = true;
+  //62
+  server.createList('season', 67, {
+    id: (i) => {
+      return 2016 - i;
+    },
+    round_ids: () => {
+      const rounds = server.createList('round', 21, {
+        practice_id: practice.id,
+        qualify_id: qualify.id,
+        race_id: race.id
+      });
 
-  server.create('season', {
-    id: 2014,
-    round_ids: rounds.mapBy('id')
+      return rounds.mapBy('id');
+    }
   });
 }
