@@ -5,6 +5,64 @@ import startApp from 'motorsports-stats-dot-com/tests/helpers/start-app';
 module('Acceptance | F1 - Results flow', {
   beforeEach: function() {
     this.application = startApp();
+
+    const practiceBestSectors = server.createList('best-sector', 27);
+    const practiceResults = server.createList('practice-result', 22);
+    let practiceSpeedTrapPositionId = 0;
+    const practiceSpeedTraps = server.createList('speed-trap', 21, {
+      position: () => { return ++practiceSpeedTrapPositionId; },
+      type: "practice"
+    });
+
+    const qualifyBestSectors = server.createList('best-sector', 27);
+    const qualifyResults = server.createList('qualify-result', 22);
+    let qualifySpeedTrapPositionId = 0;
+    const qualifySpeedTraps = server.createList('speed-trap', 26, {
+      position: () => { return ++qualifySpeedTrapPositionId; },
+      type: "qualify"
+    });
+
+    const fastestLaps = server.createList('fastest-lap', 20);
+    const raceResults = server.createList('race-result', 22);
+    const pitStops = server.createList('pit-stop', 34);
+
+    const practiceSessions = server.createList('practice-session', 3, {
+      best_sector_ids: practiceBestSectors.mapBy('id'),
+      practice_result_ids: practiceResults.mapBy('id'),
+      speed_trap_ids: practiceSpeedTraps.mapBy('id')
+    });
+    const qualifySessions = server.createList('qualify-session', 1, {
+      best_sector_ids: qualifyBestSectors.mapBy('id'),
+      qualify_result: qualifyResults.mapBy('id'),
+      speed_trap_ids: qualifySpeedTraps.mapBy('id')
+    });
+
+    const practice = server.create('practice', {
+      practice_session_ids: practiceSessions.mapBy('id')
+    });
+    const qualify = server.create('qualify', {
+      qualify_session_ids: qualifySessions.mapBy('id')
+    });
+    const race = server.create('race', {
+      fastest_lap_ids: fastestLaps.mapBy('id'),
+      pit_stop_ids: pitStops.mapBy('id'),
+      race_result_ids: raceResults.mapBy('id')
+    });
+
+    server.createList('season', 2, {
+      id: (i) => {
+        return 2016 - i;
+      },
+      round_ids: () => {
+        const rounds = server.createList('round', 19, {
+          practice_id: practice.id,
+          qualify_id: qualify.id,
+          race_id: race.id
+        });
+
+        return rounds.mapBy('id');
+      }
+    });
   },
 
   afterEach: function() {
