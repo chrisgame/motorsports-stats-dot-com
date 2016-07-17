@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 import { test, moduleForModel } from 'ember-qunit';
 
 moduleForModel('pit-stop', 'Pit Stop', {
@@ -9,8 +8,8 @@ moduleForModel('pit-stop', 'Pit Stop', {
   ]
 });
 
-test('Pit stop is a vaild ember-data model', function() {
+test('Pit stop is a vaild ember-data model', function(assert) {
   var pitStop = this.subject();
-  ok(pitStop);
-  ok(pitStop instanceof DS.Model);
+  assert.ok(pitStop);
+  assert.ok(pitStop instanceof DS.Model);
 });

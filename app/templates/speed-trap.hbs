@@ -7,13 +7,13 @@
     <th class="speed">Speed</th>
     <th class="timeOfDay">Time Of Day</th>
   </tr>
-  {{#each model}}
+  {{#each model as |result|}}
     <tr>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td class="speed">{{speed}}</td>
-      <td class="timeOfDay">{{timeOfDay}}</td>
+      <td>{{result.position}}</td>
+      <td>{{result.carNumber}}</td>
+      <td>{{result.driver}}</td>
+      <td class="speed">{{result.speed}}</td>
+      <td class="timeOfDay">{{result.timeOfDay}}</td>
     </tr>
   {{/each}}
 </table>

@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 import { test, moduleForModel } from 'ember-qunit';
 
 moduleForModel('race', 'Race Model', {
@@ -12,8 +11,8 @@ moduleForModel('race', 'Race Model', {
   ]
 });
 
-test('Race is a valid ember-data model', function() {
+test('Race is a valid ember-data model', function(assert) {
   var race = this.subject();
-  ok(race);
-  ok(race instanceof DS.Model);
+  assert.ok(race);
+  assert.ok(race instanceof DS.Model);
 });

@@ -9,15 +9,15 @@
     <th class="timeOrRetirement">Time Or Retirement</th>
     <th class="gap">Gap</th>
   </tr>
-  {{#each model}}
+  {{#each model as |result|}}
     <tr>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td>{{team}}</td>
-      <td class="laps">{{laps}}</td>
-      <td class="timeOrRetirement">{{timeOrRetirement}}</td>
-      <td class="gap">{{gap}}</td>
+      <td>{{result.position}}</td>
+      <td>{{result.carNumber}}</td>
+      <td>{{result.driver}}</td>
+      <td>{{result.team}}</td>
+      <td class="laps">{{result.laps}}</td>
+      <td class="timeOrRetirement">{{result.timeOrRetirement}}</td>
+      <td class="gap">{{result.gap}}</td>
     </tr>
   {{/each}}
 </table>

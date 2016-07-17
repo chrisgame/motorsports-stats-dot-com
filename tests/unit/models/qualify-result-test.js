@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 import { test, moduleForModel } from 'ember-qunit';
 
 moduleForModel('qualify-result', 'Qualify Result', {
@@ -9,8 +8,8 @@ moduleForModel('qualify-result', 'Qualify Result', {
   ]
 });
 
-test('Qualify result is a valid ember data model', function() {
+test('Qualify result is a valid ember data model', function(assert) {
   var qualifyResult = this.subject();
-  ok(qualifyResult);
-  ok(qualifyResult instanceof DS.Model);
+  assert.ok(qualifyResult);
+  assert.ok(qualifyResult instanceof DS.Model);
 });

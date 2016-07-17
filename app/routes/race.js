@@ -5,6 +5,6 @@ export default Ember.Route.extend({
     return this.get('store').find('race', params.race_id);
   },
   renderTemplate: function(){
-    this.render({ outlet: 'session'});
+    this.render({ into: 'season', outlet: 'session' });
   }
 });

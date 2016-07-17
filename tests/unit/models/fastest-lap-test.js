@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 import { test, moduleForModel } from 'ember-qunit';
 
 moduleForModel('fastest-lap', 'Fastest Lap', {
@@ -9,8 +8,8 @@ moduleForModel('fastest-lap', 'Fastest Lap', {
   ]
 });
 
-test('Fastest lap is a valid ember-data model', function() {
+test('Fastest lap is a valid ember-data model', function(assert) {
   var fastestLap = this.subject();
-  ok(fastestLap);
-  ok(fastestLap instanceof DS.Model);
+  assert.ok(fastestLap);
+  assert.ok(fastestLap instanceof DS.Model);
 });

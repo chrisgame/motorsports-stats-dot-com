@@ -1,6 +1,6 @@
 <h3>Practice</h3>
 <ul class="practice-sessions">
-{{#each practice_session in practice_sessions}}
+{{#each model.practice_sessions as |practice_session|}}
   <li>{{#link-to 'practice-session' practice_session.id}} {{practice_session.day}} {{practice_session.session}} {{/link-to}}</li>
 {{/each}}
 </ul>

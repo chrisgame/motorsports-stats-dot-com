@@ -10,16 +10,16 @@
     <th class="grid">Grid</th>
     <th class="points">Points</th>
   </tr>
-  {{#each model}}
+  {{#each model as |result|}}
     <tr>
-      <td>{{position}}</td>
-      <td>{{carNumber}}</td>
-      <td>{{driver}}</td>
-      <td>{{team}}</td>
-      <td class="laps">{{laps}}</td>
-      <td class="timeOrRetirement">{{timeOrRetirement}}</td>
-      <td class="grid">{{grid}}</td>
-      <td class="points">{{points}}</td>
+      <td>{{result.position}}</td>
+      <td>{{result.carNumber}}</td>
+      <td>{{result.driver}}</td>
+      <td>{{result.team}}</td>
+      <td class="laps">{{result.laps}}</td>
+      <td class="timeOrRetirement">{{result.timeOrRetirement}}</td>
+      <td class="grid">{{result.grid}}</td>
+      <td class="points">{{result.points}}</td>
     </tr>
   {{/each}}
 </table>
