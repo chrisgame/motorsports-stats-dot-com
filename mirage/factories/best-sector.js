@@ -3,7 +3,7 @@ import Driver from 'motorsports-stats-dot-com/mirage/helpers/drivers';
 import CarNumber from 'motorsports-stats-dot-com/mirage/helpers/car-numbers';
 
 export default Mirage.Factory.extend({
-  car_number: CarNumber,
+  carNumber: CarNumber,
   driver: Driver,
   position: (i) => { return ++i; },
   sector: () => { return Math.floor(Math.random() * 3) + 1; },

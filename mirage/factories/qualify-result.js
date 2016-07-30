@@ -7,16 +7,16 @@ import Team from 'motorsports-stats-dot-com/mirage/helpers/teams';
 import Retirement from 'motorsports-stats-dot-com/mirage/helpers/retirements';
 
 export default Mirage.Factory.extend({
-  car_number: CarNumber,
+  carNumber: CarNumber,
   driver: Driver,
   laps: Lap,
   position:  (i) => { return ++i; },
   q1: LapTime,
   q2: LapTime,
   q3: LapTime,
-  qualify_session_id: 207,
+  qualifySessionId: 207,
   team: Team,
-  time_or_retirement: (i) => {
+  timeOrRetirement: (i) => {
     if (i % 2 === 0) {
       const wholes = Math.floor(Math.random() * 120) + 0;
       const fractions = Math.floor(Math.random() * 999) + 0;

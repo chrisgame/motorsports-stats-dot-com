@@ -6,21 +6,21 @@ import TimeOfDay from 'motorsports-stats-dot-com/mirage/helpers/times-of-day';
 import Laps from 'motorsports-stats-dot-com/mirage/helpers/laps';
 
 export default Mirage.Factory.extend({
-  average_speed: () => {
+  averageSpeed: () => {
     const wholes = Math.floor(Math.random() * 300) + 0;
     const fractions = Math.floor(Math.random() * 999) + 0;
     return wholes + '.' + fractions;
   },
-  car_number: CarNumber,
+  carNumber: CarNumber,
   driver: Driver,
   lap: Laps,
   position: (i) => { return ++i; },
-  race_id: 898,
+  raceId: 898,
   team: Team,
   time: () => {
     const wholes = Math.floor(Math.random() * 99) + 0;
     const fractions = Math.floor(Math.random() * 999) + 0;
     return wholes + '.' + fractions;
   },
-  time_of_day: TimeOfDay
+  timeOfDay: TimeOfDay
 });
