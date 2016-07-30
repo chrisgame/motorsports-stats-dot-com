@@ -6,12 +6,12 @@ export default function() {
   this.get('practices/:id', 'practice');
   this.get('practice_sessions/:id', 'practiceSession');
   this.get('qualifies/:id', 'qualify');
-  this.get('/speed_traps', function(db, request) {
   this.get('qualify_sessions/:id', 'qualifySession');
   this.get('best_sectors', 'bestSector');
   this.get('fastest_laps', 'fastestLap');
   this.get('pit_stops', 'pitStop');
   this.get('best_sectors', 'bestSector');
+  this.get('/speed_traps', function({db}, request) {
     const queryParams = request.queryParams;
 
     if (!queryParams) {
