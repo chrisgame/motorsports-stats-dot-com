@@ -60,6 +60,4 @@ export default function(server) {
       return rounds.mapBy('id');
     }
   });
-
-  debugger;
 }
