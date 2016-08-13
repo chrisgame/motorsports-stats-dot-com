@@ -4,5 +4,5 @@ export default Model.extend({
   round: belongsTo(),
   fastestLaps: hasMany(),
   pitStops: hasMany(),
-  results: hasMany()
+  results: hasMany('race-results')
 });

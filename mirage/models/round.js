@@ -1,8 +1,8 @@
-import { Model, belongsTo } from 'ember-cli-mirage';
+import { Model, belongsTo, hasMany } from 'ember-cli-mirage';
 
 export default Model.extend({
   season: belongsTo(),
-  practice: belongsTo(),
-  qualify: belongsTo(),
-  race: belongsTo()
+  practice: hasMany(),
+  qualify: hasMany(),
+  race: hasMany()
 });
