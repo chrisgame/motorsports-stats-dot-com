@@ -1,6 +1,6 @@
 export default function(server) {
   const practiceBestSectors = server.createList('bestSector', 26);
-  //const practiceResults = server.createList('practiceResult', 26);
+  const practiceResults = server.createList('practiceResult', 26);
   let practiceSpeedTrapPositionId = 0;
   const practiceSpeedTraps = server.createList('speedTrap', 26, {
     position: () => { return ++practiceSpeedTrapPositionId; },
@@ -8,7 +8,7 @@ export default function(server) {
   });
 
   const qualifyBestSectors = server.createList('bestSector', 26);
-  //const qualifyResults = server.createList('qualifyResult', 25);
+  const qualifyResults = server.createList('qualifyResult', 25);
   let qualifySpeedTrapPositionId = 0;
   const qualifySpeedTraps = server.createList('speedTrap', 26, {
     position: () => { return ++qualifySpeedTrapPositionId; },
@@ -21,12 +21,12 @@ export default function(server) {
 
   const practiceSessions = server.createList('practiceSession', 1, {
     bestSectorIds: practiceBestSectors.mapBy('id'),
-    //practiceResultIds: practiceResults.mapBy('id'),
+    practiceResultIds: practiceResults.mapBy('id'),
     speedTrapIds: practiceSpeedTraps.mapBy('id')
   });
   const qualifySessions = server.createList('qualifySession', 1, {
     bestSectorIds: qualifyBestSectors.mapBy('id'),
-    //qualifyResultIds: qualifyResults.mapBy('id'),
+    qualifyResultIds: qualifyResults.mapBy('id'),
     speedTrapIds: qualifySpeedTraps.mapBy('id')
   });
 
