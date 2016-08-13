@@ -14,7 +14,6 @@ export default Mirage.Factory.extend({
   q1: LapTime,
   q2: LapTime,
   q3: LapTime,
-  qualifySessionId: 207,
   team: Team,
   timeOrRetirement: (i) => {
     if (i % 2 === 0) {

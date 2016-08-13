@@ -18,7 +18,6 @@ export default Mirage.Factory.extend({
   },
   laps: Laps,
   position: (i) => { return ++i; },
-  practiceSessionId: 540,
   team: Team,
   timeOrRetirement: (i) => {
     if (i % 2 === 0) {
