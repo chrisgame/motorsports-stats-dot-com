@@ -4,7 +4,12 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    fingerprint: {
+      prepend: 'https://s3-eu-west-1.amazonaws.com/prod.motorsports.stats.dot.com/'
+    },
+    sourcemaps: {
+      enabled: true
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated

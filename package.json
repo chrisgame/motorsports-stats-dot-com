@@ -14,6 +14,7 @@
     "test": "ember test"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "active-model-adapter": "^2.1.1",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
@@ -26,6 +27,8 @@
     "ember-cli-htmlbars-inline-precompile": "^0.3.6",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-jshint": "^2.0.1",
+    "ember-cli-deploy": "0.6.4",
+    "ember-cli-deploy-lightning-pack": "0.6.5",
     "ember-cli-mirage": "0.1.11",
     "ember-cli-moment-shim": "3.0.1",
     "ember-cli-qunit": "^3.0.1",
