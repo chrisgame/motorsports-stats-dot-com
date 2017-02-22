@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "motorsports-stats-dot-com",
   "version": "0.0.0",
   "description": "Small description for motorsports-stats-dot-com goes here",
+=======
+  "name": "msdc-clean",
+  "version": "0.0.0",
+  "description": "Small description for msdc-clean goes here",
+>>>>>>> c43e8d5... remove welcome page
   "license": "MIT",
   "author": "",
   "directories": {
@@ -36,7 +42,10 @@
     "ember-load-initializers": "^0.6.0",
     "ember-resolver": "^2.0.3",
     "ember-source": "~2.11.0",
+<<<<<<< HEAD
     "ember-welcome-page": "^2.0.2",
+=======
+>>>>>>> c43e8d5... remove welcome page
     "loader.js": "^4.0.10"
   },
   "engines": {

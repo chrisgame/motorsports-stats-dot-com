@@ -2,7 +2,11 @@
 
 module.exports = function(environment) {
   var ENV = {
+<<<<<<< HEAD
     modulePrefix: 'motorsports-stats-dot-com',
+=======
+    modulePrefix: 'msdc-clean',
+>>>>>>> c43e8d5... remove welcome page
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

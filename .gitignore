@@ -10,6 +10,10 @@
 
 # misc
 /.sass-cache
+<<<<<<< HEAD
+=======
+/.bowerrc
+>>>>>>> c43e8d5... remove welcome page
 /connect.lock
 /coverage/*
 /libpeerconnection.log

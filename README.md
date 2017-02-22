@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # motorsports-stats-dot-com
+=======
+# msdc-clean
+>>>>>>> c43e8d5... remove welcome page
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
@@ -16,7 +20,11 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
+<<<<<<< HEAD
 * `cd motorsports-stats-dot-com`
+=======
+* `cd msdc-clean`
+>>>>>>> c43e8d5... remove welcome page
 * `npm install`
 * `bower install`
 

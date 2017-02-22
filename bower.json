@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "motorsports-stats-dot-com",
+=======
+  "name": "msdc-clean",
+>>>>>>> c43e8d5... remove welcome page
   "dependencies": {
   }
 }
