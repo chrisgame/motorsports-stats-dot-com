@@ -1,7 +1,7 @@
-import DS from 'ember-data';
+import ActiveModelAdapter from 'active-model-adapter';
 import ENV from 'motorsports-stats-dot-com/config/environment';
 
-export default DS.ActiveModelAdapter.reopen({
+export default ActiveModelAdapter.extend({
   host: ENV.apiHost,
   shouldReloadAll: function() {
     return true;

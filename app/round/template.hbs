@@ -1,0 +1,7 @@
+<h3>{{model.name}}</h3>
+<ul>
+  <li>{{#link-to 'practice' model.practice.id}} Practice {{/link-to}}</li>
+  <li>{{#link-to 'qualify' model.qualify.id}} Qualify {{/link-to}}</li>
+  <li>{{#link-to 'race' model.race.id}} Race {{/link-to}}</li>
+</ul>
+{{outlet}}

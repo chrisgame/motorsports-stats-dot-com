@@ -1,0 +1,9 @@
+<div>
+  <h3>F1</h3>
+  <ul class='seasons'>
+    {{#each seasons as |season|}}
+      <li>{{#link-to 'season' season.id}} {{season.id}} {{/link-to}}</li>
+    {{/each}}
+  </ul>
+</div>
+{{outlet}}

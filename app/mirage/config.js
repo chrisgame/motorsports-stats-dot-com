@@ -2,6 +2,7 @@ export default function() {
   this.timing = 0; //no delay
 
   this.get('/seasons');
+  this.get('seasons/:id', 'season');
   this.get('rounds/:id');
   this.get('practices/:id', 'practice');
   this.get('practice_sessions/:id', 'practice-session');

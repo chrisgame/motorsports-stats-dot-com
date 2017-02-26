@@ -1,9 +1,8 @@
 {
-<<<<<<< HEAD
   "name": "motorsports-stats-dot-com",
-=======
-  "name": "msdc-clean",
->>>>>>> c43e8d5... remove welcome page
   "dependencies": {
+    "pretender": "~0.10.1",
+    "lodash": "~3.7.0",
+    "Faker": "~3.0.0"
   }
 }
