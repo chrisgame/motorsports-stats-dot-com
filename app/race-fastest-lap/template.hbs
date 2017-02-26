@@ -1,0 +1,26 @@
+<h3>Fastest Laps</h3>
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Car Number</th>
+    <th>Driver</th>
+    <th>Team</th>
+    <th>Lap</th>
+    <th>Time Of Day</th>
+    <th>Average Speed</th>
+    <th>Time</th>
+  </tr>
+  {{#each model as |result|}}
+    <tr>
+      <td>{{result.position}}</td>
+      <td>{{result.carNumber}}</td>
+      <td>{{result.driver}}</td>
+      <td>{{result.team}}</td>
+      <td>{{result.lap}}</td>
+      <td>{{result.timeOfDay}}</td>
+      <td>{{result.averageSpeed}}</td>
+      <td>{{result.time}}</td>
+    </tr>
+  {{/each}}
+</table>
+

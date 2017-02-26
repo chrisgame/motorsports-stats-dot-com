@@ -1,0 +1,20 @@
+<h3>Best Sectors</h3>
+<table>
+  <tr>
+    <th>Sector</th>
+    <th>Position</th>
+    <th>Car Number</th>
+    <th>Driver</th>
+    <th>Time</th>
+  </tr>
+  {{#each model as |sector|}}
+    <tr>
+      <td>{{sector.sector}}</td>
+      <td>{{sector.position}}</td>
+      <td>{{sector.carNumber}}</td>
+      <td>{{sector.driver}}</td>
+      <td>{{sector.time}}</td>
+    </tr>
+  {{/each}}
+</table>
+

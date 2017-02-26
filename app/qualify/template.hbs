@@ -1,0 +1,7 @@
+<h3>Qualifying</h3>
+<ul>
+{{#each model.qualify_sessions as |qualify_session|}}
+  <li>{{#link-to 'qualify-session' qualify_session.id}} {{qualify_session.day}} {{qualify_session.session}} {{/link-to}}</li>
+{{/each}}
+</ul>
+{{outlet}}
