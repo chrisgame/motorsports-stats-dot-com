@@ -1,30 +1,29 @@
 Arguments: 
-  /Users/chris/.nvm/versions/node/v7.3.0/bin/node /usr/local/bin/yarn add ember-cli-mirage
+  /usr/local/Cellar/node/7.4.0/bin/node /usr/local/bin/yarn add ember-moment
 
 PATH: 
-  /Users/chris/.rvm/gems/ruby-2.3.0/bin:/Users/chris/.rvm/gems/ruby-2.3.0@global/bin:/Users/chris/.rvm/rubies/ruby-2.3.0/bin:/Users/chris/.nvm/versions/node/v7.3.0/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/Users/chris/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/chris/.rvm/bin
+  /Users/chris/.rvm/gems/ruby-2.3.0/bin:/Users/chris/.rvm/gems/ruby-2.3.0@global/bin:/Users/chris/.rvm/rubies/ruby-2.3.0/bin:/Users/chris/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/chris/.rvm/bin
 
 Yarn version: 
   0.18.1
 
 Node version: 
-  7.3.0
+  7.4.0
 
 Platform: 
   darwin x64
 
 npm manifest: 
   {
-    "name": "msdc-clean",
+    "name": "motorsports-stats-dot-com",
     "version": "0.0.0",
-    "description": "Small description for msdc-clean goes here",
-    "license": "MIT",
+    "description": "Visualizations of motorsport data",
+    "repository": "",
     "author": "",
     "directories": {
       "doc": "doc",
       "test": "tests"
     },
-    "repository": "",
     "scripts": {
       "build": "ember build",
       "start": "ember server",
