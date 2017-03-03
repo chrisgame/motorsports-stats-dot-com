@@ -2,16 +2,16 @@ export default function() {
   this.timing = 0; //no delay
 
   this.get('/seasons');
-  this.get('seasons/:id', 'season');
-  this.get('rounds/:id');
-  this.get('practices/:id', 'practice');
-  this.get('practice_sessions/:id', 'practice-session');
-  this.get('qualifies/:id', 'qualify');
-  this.get('qualify_sessions/:id', 'qualify-session');
-  this.get('best_sectors', 'best-sector');
-  this.get('fastest_laps', 'fastest-lap');
-  this.get('pit_stops', 'pit-stop');
-  this.get('best_sectors', 'best-sector');
+  this.get('/rounds/:id');
+  this.get('/seasons/:id', 'season');
+  this.get('/practices/:id', 'practice');
+  this.get('/practice_sessions/:id', 'practice-session');
+  this.get('/qualifies/:id', 'qualify');
+  this.get('/qualify_sessions/:id', 'qualify-session');
+  this.get('/best_sectors', 'best-sector');
+  this.get('/fastest_laps', 'fastest-lap');
+  this.get('/pit_stops', 'pit-stop');
+  this.get('/best_sectors', 'best-sector');
   this.get('/speed_traps', function(db, request) {
     const queryParams = request.queryParams;
 
