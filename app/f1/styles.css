@@ -1,0 +1,25 @@
+.f1-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.seasons {
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+}
+
+.session {
+  margin: 9px;
+  flex-wrap: nowrap;
+}
+
+.session a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.session a:hover {
+  color: black;
+}

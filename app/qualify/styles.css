@@ -1,0 +1,25 @@
+.qualifying-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.qualifies {
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+}
+
+.qualify {
+  margin: 9px;
+  flex-wrap: nowrap;
+}
+
+.qualify a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.qualify a:hover {
+  color: black;
+}

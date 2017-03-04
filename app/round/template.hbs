@@ -1,7 +1,9 @@
 <h3>{{model.name}}</h3>
-<ul>
-  <li>{{#link-to 'practice' model.practice.id}} Practice {{/link-to}}</li>
-  <li>{{#link-to 'qualify' model.qualify.id}} Qualify {{/link-to}}</li>
-  <li>{{#link-to 'race' model.race.id}} Race {{/link-to}}</li>
-</ul>
-{{outlet}}
+<div local-class="session-container">
+  <ul local-class="sessions">
+    <li local-class="session">{{#link-to 'practice' model.practice.id}} Practice {{/link-to}}</li>
+    <li local-class="session">{{#link-to 'qualify' model.qualify.id}} Qualify {{/link-to}}</li>
+    <li local-class="session">{{#link-to 'race' model.race.id}} Race {{/link-to}}</li>
+  </ul>
+  {{outlet}}
+</div>

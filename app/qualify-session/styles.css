@@ -1,0 +1,26 @@
+.qualifying-session-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.qualifying-sessions {
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+}
+
+.qualifying-session {
+  margin: 9px;
+  flex-wrap: nowrap;
+}
+
+.qualifying-session a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.qualifying-session a:hover {
+  color: black;
+}
+
