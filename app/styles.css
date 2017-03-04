@@ -1,0 +1,13 @@
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul, li,
+form, fieldset, legend,
+figure, caption,
+table, th, td,
+hr, nav, section, header, button {
+  margin:  0;
+  padding: 0;
+  min-width: 0;
+  flex-shrink: 0;
+}

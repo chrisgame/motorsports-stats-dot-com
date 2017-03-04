@@ -1,0 +1,25 @@
+.round-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.rounds {
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+}
+
+.round {
+  margin: 9px;
+  flex-wrap: nowrap;
+}
+
+.round a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.round a:hover {
+  color: black;
+}

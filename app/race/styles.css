@@ -1,0 +1,26 @@
+.race-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.races {
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+}
+
+.race {
+  margin: 9px;
+  flex-wrap: nowrap;
+}
+
+.race a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.race a:hover {
+  color: black;
+}
+

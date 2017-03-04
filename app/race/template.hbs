@@ -1,7 +1,9 @@
 <h3>Race</h3>
-<ul>
-  <li>{{#link-to 'race-fastest-lap' model.id}} Fastest Laps {{/link-to}}</li>
-  <li>{{#link-to 'race-pit-stop' model.id}} Pit Stop {{/link-to}}</li>
-  <li>{{#link-to 'race-result' model.id}} Results {{/link-to}}</li>
-</ul>
-{{outlet}}
+<div local-class="race-container">
+  <ul local-class="races">
+    <li local-class="race">{{#link-to 'race-fastest-lap' model.id}} Fastest Laps {{/link-to}}</li>
+    <li local-class="race">{{#link-to 'race-pit-stop' model.id}} Pit Stop {{/link-to}}</li>
+    <li local-class="race">{{#link-to 'race-result' model.id}} Results {{/link-to}}</li>
+  </ul>
+  {{outlet}}
+</div>

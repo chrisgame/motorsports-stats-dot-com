@@ -1,0 +1,25 @@
+.practice-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.practices {
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+}
+
+.practice {
+  margin: 9px;
+  flex-wrap: nowrap;
+}
+
+.practice a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.practice a:hover {
+  color: black;
+}

@@ -1,0 +1,25 @@
+.practice-session-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.practice-sessions {
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+}
+
+.practice-session {
+  margin: 9px;
+  flex-wrap: nowrap;
+}
+
+.practice-session a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.practice-session a:hover {
+  color: black;
+}

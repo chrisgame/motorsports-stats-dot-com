@@ -1,7 +1,9 @@
 <h3>{{model.day}} {{model.session}}</h3>
-<ul>
-  <li>{{#link-to 'practice-best-sector' model.id}} Best Sectors {{/link-to}}</li>
-  <li>{{#link-to 'practice-speed-trap' model.id}} Speed Traps {{/link-to}}</li>
-  <li>{{#link-to 'practice-result' model.id}} Results {{/link-to}}</li>
-</ul>
-{{outlet}}
+<div local-class="practice-session-container">
+  <ul local-class="practice-sessions">
+    <li local-class="practice-session">{{#link-to 'practice-best-sector' model.id}} Best Sectors {{/link-to}}</li>
+    <li local-class="practice-session">{{#link-to 'practice-speed-trap' model.id}} Speed Traps {{/link-to}}</li>
+    <li local-class="practice-session">{{#link-to 'practice-result' model.id}} Results {{/link-to}}</li>
+  </ul>
+  {{outlet}}
+</div>
