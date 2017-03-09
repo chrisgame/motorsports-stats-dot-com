@@ -1,5 +1,4 @@
 <div local-class="round-container">
-  <h3>{{model.id}}</h3>
   <ul local-class="rounds">
   {{#each model.rounds as |round|}}
     <li local-class="round">{{#link-to 'round' round.id}} {{round.name}} {{/link-to}}</li>

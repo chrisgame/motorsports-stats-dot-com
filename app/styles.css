@@ -11,3 +11,7 @@ hr, nav, section, header, button {
   min-width: 0;
   flex-shrink: 0;
 }
+
+:global(a.active) {
+  color: black;
+}
