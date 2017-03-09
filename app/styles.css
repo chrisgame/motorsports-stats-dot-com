@@ -12,6 +12,15 @@ hr, nav, section, header, button {
   flex-shrink: 0;
 }
 
+:global(a) {
+  color: lightgray;
+  text-decoration: none;
+}
+
 :global(a.active) {
+  color: black;
+}
+
+:global(a:hover) {
   color: black;
 }

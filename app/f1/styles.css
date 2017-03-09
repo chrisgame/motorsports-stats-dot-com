@@ -14,12 +14,3 @@
   margin: 9px;
   flex-wrap: nowrap;
 }
-
-.session a {
-  color: lightgray;
-  text-decoration: none;
-}
-
-.session a:hover {
-  color: black;
-}

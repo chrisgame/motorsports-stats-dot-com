@@ -14,13 +14,3 @@
   margin: 9px;
   flex-wrap: nowrap;
 }
-
-.race a {
-  color: lightgray;
-  text-decoration: none;
-}
-
-.race a:hover {
-  color: black;
-}
-

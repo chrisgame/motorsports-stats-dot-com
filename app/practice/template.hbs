@@ -1,9 +1,9 @@
-<h3>Practice</h3>
 <div local-class="practice-container">
   <ul local-class="practices">
     {{#each model.practice_sessions as |practice_session|}}
       <li local-class="practice">{{#link-to 'practice-session' practice_session.id}} {{practice_session.day}} {{practice_session.session}} {{/link-to}}</li>
     {{/each}}
   </ul>
-  {{outlet}}
 </div>
+
+{{outlet}}
