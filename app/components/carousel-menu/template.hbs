@@ -1,0 +1,9 @@
+<div local-class="main-container">
+  <button local-class="direction-arrow-button-left" onclick={{action 'scrollLeft'}}>&lsaquo;</button>
+  <div local-class="item-container">
+    <ul local-class="items">
+      {{yield}}
+    </ul>
+  </div>
+  <button local-class="direction-arrow-button-right" onclick={{action 'scrollRight'}}>&rsaquo;</button>
+</div>

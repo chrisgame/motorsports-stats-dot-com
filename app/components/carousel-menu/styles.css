@@ -1,0 +1,40 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.items {
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+}
+
+.direction-arrow-button {
+  padding-bottom: 5px;
+  border: none;
+  display: flex;
+  font-size: 25px;
+  cursor: pointer;
+  color: lightgray;
+  background: #FFF;
+}
+
+.direction-arrow-button-left {
+  composes: direction-arrow-button;
+  margin-right: 9px;
+}
+
+.direction-arrow-button-right {
+  composes: direction-arrow-button;
+  margin-left: 9px;
+}
+
+.direction-arrow-button:hover {
+  color: black;
+}

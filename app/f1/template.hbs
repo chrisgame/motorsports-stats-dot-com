@@ -1,11 +1,9 @@
 <div>
   <h3>F1</h3>
-  <div local-class="f1-container">
-    <ul local-class="seasons">
+    {{#carousel-menu}}
       {{#each seasons as |season|}}
         <li local-class="session">{{#link-to 'season' season.id}} {{season.id}} {{/link-to}}</li>
       {{/each}}
-    </ul>
-  </div>
+    {{/carousel-menu}}
   {{outlet}}
 </div>
