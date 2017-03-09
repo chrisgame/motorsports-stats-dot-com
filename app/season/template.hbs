@@ -1,8 +1,7 @@
-<div local-class="round-container">
-  <ul local-class="rounds">
+{{#carousel-menu}}
   {{#each model.rounds as |round|}}
     <li local-class="round">{{#link-to 'round' round.id}} {{round.name}} {{/link-to}}</li>
   {{/each}}
-  </ul>
-  {{outlet}}
-</div>
+{{/carousel-menu}}
+
+{{outlet}}
