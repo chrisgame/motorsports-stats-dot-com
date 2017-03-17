@@ -1,15 +1,47 @@
-<table>
+{{#sortable-table}}
   <tr>
-    <th>Position</th>
-    <th>Car Number</th>
-    <th>Driver</th>
-    <th>Team</th>
-    <th>Laps</th>
-    <th>Time Or Retirement</th>
-    <th>Grid</th>
-    <th>Points</th>
+    <th>
+      {{#link-to 'race-result' (query-params field='position' direction=toggleDirection)}}
+        Position
+      {{/link-to}}
+    </th>
+    <th>
+      {{#link-to 'race-result' (query-params field='carNumber' direction=toggleDirection)}}
+        Car Number
+      {{/link-to}}
+    </th>
+    <th>
+      {{#link-to 'race-result' (query-params field='driver' direction=toggleDirection)}}
+        Driver
+      {{/link-to}}
+    </th>
+    <th>
+      {{#link-to 'race-result' (query-params field='team' direction=toggleDirection)}}
+        Team
+      {{/link-to}}
+    </th>
+    <th>
+      {{#link-to 'race-result' (query-params field='laps' direction=toggleDirection)}}
+        Laps
+      {{/link-to}}
+    </th>
+    <th>
+      {{#link-to 'race-result' (query-params field='timeOrRetirement' direction=toggleDirection)}}
+        Time Or Retirement
+      {{/link-to}}
+    </th>
+    <th>
+      {{#link-to 'race-result' (query-params field='grid' direction=toggleDirection)}}
+        Grid
+      {{/link-to}}
+    </th>
+    <th>
+      {{#link-to 'race-result' (query-params field='points' direction=toggleDirection)}}
+        Points
+      {{/link-to}}
+    </th>
   </tr>
-  {{#each model as |result|}}
+  {{#each sortedResults as |result|}}
     <tr>
       <td>{{result.position}}</td>
       <td>{{result.carNumber}}</td>
@@ -21,4 +53,4 @@
       <td>{{result.points}}</td>
     </tr>
   {{/each}}
-</table>
+{{/sortable-table}}
