@@ -1,30 +1,24 @@
+---
 language: node_js
 node_js:
-- 6.2.0
-sudo: required
-dist: trusty
+  - "4"
+
+sudo: false
+
 cache:
   directories:
-  - node_modules
-  - bower_components
+    - $HOME/.npm
+    - $HOME/.cache # includes bowers cache
+
 before_install:
-- export CHROME_BIN=/usr/bin/google-chrome
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
-- npm config set spin false
-- npm install -g npm@3.9.2
-- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-- sudo dpkg -i google-chrome*.deb
+  - npm config set spin false
+  - npm install -g bower phantomjs-prebuilt
+  - bower --version
+  - phantomjs --version
+
 install:
-- npm install -g bower
-- npm install
-- bower install
+  - npm install
+  - bower install
+
 script:
-- npm test
-after_success:
-- ember deploy prod
-env:
-  global:
-  - secure: g8gbckY5qfe4PDQPYeM2Z0pFNMcF7/BXy2K+BF/nmr4cjqzv8O72SWKQdYsllHJoCfKEUhnlkIDfaTefJwU1CSakgTZVvAMTVOfws1sMti4oxCI5iKi4CiRqLUzTWgOFloobbppIQYho1Z602LPXXr7BHAJ8NHSB1dGIzx6WKNY=
-  - secure: whOcdaiVAcr+Nxx40ywy0I71BS09p6kqX9wxJehT0oWHj8/NhBkQ66S3g3Dh7btsO2ikNmQroAzof3mDIV2EBeswdHj6fbQGoTbDg6Qbq4dMNDvF+alMX4JsodJuPf12AJ/6VvJsHMvnKjr+EoCG2Euz5cnkjtjfimqlkBC9Jow=
-  - secure: DAHkkU8J01EKlojq7Je7aJOBpbJ00+oJTxuEfPtdDQvq0+gokS1oJihP1uaEvD96RPzLUPsNcCQeUc9fR//+TL5U3iSKQgi+0ygii39IhyMyD6cgYXoUI+Ef4T+O93Hqnh48mBknmxDCRpmNUDVqoOIdNv/BYVNIkwPGXGXXdIg=
+  - npm test
