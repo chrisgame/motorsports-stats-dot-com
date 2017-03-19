@@ -6,21 +6,42 @@ form, fieldset, legend,
 figure, caption,
 table, th, td,
 hr, nav, section, header, button {
+  font-family: 'Source+Sans+Pro:300,400,700,900', sans-serif;
   margin:  0;
   padding: 0;
   min-width: 0;
   flex-shrink: 0;
 }
 
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+:global(h1) {
+  font-weight: 900;
+}
+
 :global(a) {
   color: lightgray;
+  font-weight: 300;
   text-decoration: none;
 }
 
 :global(a.active) {
-  color: black;
+  color: gray;
+  font-weight: 700;
 }
 
 :global(a:hover) {
   color: black;
+}
+
+:global(th) {
+  color: gray;
+  font-weight: 700;
+}
+
+:global(td) {
+  color: gray;
+  font-weight: 400;
 }
