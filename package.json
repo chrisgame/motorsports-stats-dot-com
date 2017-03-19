@@ -1,7 +1,7 @@
 {
   "name": "motorsports-stats-dot-com",
   "version": "0.0.0",
-  "description": "Small description for motorsports-stats-dot-com goes here",
+  "description": "Visualizations of motorsport data",
   "repository": "https://github.com/chrisgame/motorsports-stats-dot-com",
   "author": "chrisgame",
   "directories": {
